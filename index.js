@@ -1,5 +1,5 @@
-fetch('https://jsonplaceholder.typicode.com/users/')
-  .then(response => response.json())
-  .then( users => console.log(users[3].company.name))
 
+const response = await fetch('https://jsonplaceholder.typicode.com/users/')
+     .then( async response => await response.json());
 
+console.log(response[0].name)
